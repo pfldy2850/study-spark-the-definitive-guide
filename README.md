@@ -13,12 +13,22 @@ $ docker build . --tag stdg-spark:latest
 비밀번호: `stdg1234`
 
 ```cmd
+# windows
 $ docker run -d --rm ^
     -p 8888:8888 -p 4040:4040 ^
     -v D:\Dev\spark-the-definitive-guide\jupyterlab:/home/jovyan ^
     -v D:\Dev\spark-the-definitive-guide\data:/data ^
     --name stdg-spark ^
     stdg-spark:latest ^
+    start-notebook.sh --NotebookApp.password='argon2:$argon2id$v=19$m=10240,t=10,p=8$3tOM7HJK1FJkWdNMUEg8AA$RiUIo1/+5d8WgFDyRKZACJX8Gne6ASVINIM175e0lZs'
+
+# mac
+$ docker run -d --rm \
+    -p 8888:8888 -p 4040:4040 \
+    -v $(pwd)/jupyterlab:/home/jovyan \
+    -v $(pwd)/data:/data \
+    --name stdg-spark \
+    stdg-spark:latest \
     start-notebook.sh --NotebookApp.password='argon2:$argon2id$v=19$m=10240,t=10,p=8$3tOM7HJK1FJkWdNMUEg8AA$RiUIo1/+5d8WgFDyRKZACJX8Gne6ASVINIM175e0lZs'
 ```
 
