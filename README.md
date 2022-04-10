@@ -25,3 +25,4 @@ $ docker run -d --rm ^
 ## 관련 블로그글
 
 - Chapter 1. 빅데이터와 스파크 간단히 살펴보기 ([링크](https://dytis.tistory.com/41))
+- Chapter 2. 구조적 API: DataFrame, SQL, Dataset ([링크](https://dytis.tistory.com/42))
